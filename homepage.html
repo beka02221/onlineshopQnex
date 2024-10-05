@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qnexstore</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px;
+            color: #00ffab;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px;
+        }
+        nav button {
+            background-color: #00ffab;
+            border: none;
+            color: #1a1a1a;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        nav button:hover {
+            background-color: #00d189;
+        }
+        .description {
+            text-align: center;
+            margin: 20px;
+            font-size: 1.2rem;
+            color: #00ffab;
+        }
+        .description a {
+            color: #00ffab;
+            text-decoration: none;
+        }
+        .description a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+        .card {
+            background-color: #2a2a2a;
+            border: 2px solid #00ffab;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .card h3 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+        .card p {
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+        .card button {
+            background-color: #00ffab;
+            border: none;
+            color: #1a1a1a;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .card button:hover {
+            background-color: #00d189;
+        }
+
+        
+        #contact {
+            padding: 40px;
+            text-align: center;
+            background-color: #2a2a2a;
+            color: #fff;
+        }
+        #contact h2 {
+            margin-bottom: 20px;
+            color: #00ffab;
+        }
+
+        
+        @media (max-width: 768px) {
+            nav button {
+                padding: 10px 15px;
+            }
+            .container {
+                grid-template-columns: 1fr;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to Our Online Store</h1>
+
+    
+    <nav>
+        <button onclick="window.location.reload()">Home</button>
+        <button onclick="scrollToContact()">Contact</button>
+    </nav>
+
+    <!-- Описание -->
+    <div class="description">
+        <p>All our products are available on our <a href="https://www.instagram.com/qnexshop?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram</a>. We have served over 60 happy customers!</p>
+    </div>
+
+    <!-- Карточки товаров -->
+    <div class="container">
+        <!-- Карточка товара 1 -->
+        <div class="card">
+            <img src="https://media.karousell.com/media/photos/products/2018/11/07/nike_big_swoosh_jacket_white_sizem_1541570536_113fe13a_progressive.jpg" alt="Product 1">
+            <h3></h3>
+            <p></p>
+            <button onclick="contactUs()">Buy Now</button>
+        </div>
+
+        <!-- Карточка товара 2 -->
+        <div class="card">
+            <img src="https://avatars.mds.yandex.net/i?id=fc440a4c6433455198e50f918189001d-4935694-images-thumbs&n=13" alt="Product 2">
+            <h3></h3>
+            <p></p>
+            <button onclick="contactUs()">Buy Now</button>
+        </div>
+
+        <!-- Карточка товара 3 -->
+        <div class="card">
+            <img src="https://avatars.mds.yandex.net/i?id=9437f7939724cf4201ef0ae29a40e72b_l-9043751-images-thumbs&n=13" alt="Product 3">
+            <h3></h3>
+            <p></p>
+            <button onclick="contactUs()">Buy Now</button>
+        </div>
+
+       
+    </div>
+
+    <!-- Контакты -->
+    <div id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: Qnexstore@gmail.com</p>
+        <p>Instagram: <a href="https://www.instagram.com/qnexshop/" target="_blank">@QnexStore</a></p>
+    </div>
+
+    <script>
+        function contactUs() {
+            alert("To purchase, please contact us via Instagram!");
+        }
+
+        function scrollToContact() {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>
